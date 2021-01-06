@@ -1,1 +1,1 @@
-# https://qdstore.000webhostapp.com/
+# Ứng dụng bán hàng
