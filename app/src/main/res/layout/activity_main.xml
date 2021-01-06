@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MainActivity">
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/dlHome"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="5">
+            <Toolbar
+                android:id="@+id/tbHome"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="#4CAF50"
+                android:title="Trang Chủ">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="160dp">
+
+                </LinearLayout>
+
+                    <Button
+                        android:id="@+id/btGiohang"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/cart"
+                        android:focusable="false" />
+
+            </Toolbar>
+        </LinearLayout>
+            <ViewFlipper
+                android:id="@+id/vfHome"
+                android:layout_width="match_parent"
+                android:background="#F4F1F0"
+                android:layout_height="150dp">
+
+            </ViewFlipper>
+            <LinearLayout
+                android:background="#00BCD4"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:fontFamily="sans-serif"
+                    android:freezesText="false"
+                    android:text="Sản phẩm mới nhất"
+                    android:textColor="#EC870E"
+                    android:textSize="20sp"
+                    android:textStyle="bold|italic">
+
+                </TextView>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvHome"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+        </LinearLayout>
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/nvHome"
+            android:layout_gravity="start"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ListView
+                android:id="@+id/lvHome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </ListView>
+        </com.google.android.material.navigation.NavigationView>
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+</LinearLayout>
